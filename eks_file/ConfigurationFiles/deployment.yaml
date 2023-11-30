@@ -18,3 +18,4 @@ spec:
         image: argoproj/argocd-server:v2.6.6
         ports:
         - containerPort: 8081
+
