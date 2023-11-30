@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argocd-server
-  namespace: argocd
+  name: nginx
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: app.kubernetes.io/name: argocd-server
+      app: nginx
+  replicas: 1
   template:
     metadata:
       labels:
-        app: app.kubernetes.io/name: argocd-server
+        app: nginx
     spec:
       containers:
-      - name: argocd-server
-        image: argoproj/argocd-server:v2.6.6
+      - name: nginx
+        image: nginx
         ports:
-        - containerPort: 8081
-
+        - containerPort: 80
