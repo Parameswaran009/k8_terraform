@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: argocd-server
-        image: argoproj/argocd-server:v2.9.2
+        image: argoproj/argocd-server:v2.6.6
         ports:
         - containerPort: 8081

@@ -10,7 +10,7 @@ spec:
   - name: http
     port: 80
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8081
   selector:
     app: argocd-server
   type: LoadBalancer
