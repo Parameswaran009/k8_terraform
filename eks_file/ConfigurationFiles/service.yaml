@@ -4,7 +4,7 @@ metadata:
   name: argocd-server
   namespace: argocd
   labels:
-    app: argocd-server
+    app: argocd
 spec:
   ports:
   - name: http
@@ -12,6 +12,6 @@ spec:
     protocol: TCP
     targetPort: 8081
   selector:
-    app: argocd-server
+    app: argocd
   type: LoadBalancer
 

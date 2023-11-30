@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: argocd-server
+      app: argocd
   template:
     metadata:
       labels:
-        app: argocd-server
+        app: argocd
     spec:
       containers:
       - name: argocd-server
