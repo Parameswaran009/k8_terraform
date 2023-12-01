@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "ram-vpc"
+  name = "ramu-vpc"
   cidr = var.vpc_cidr
 
   azs = data.aws_availability_zones.azs.names
