@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "ramu-vpc"
+  name = "paramu-vpc"
   cidr = var.vpc_cidr
 
   azs = data.aws_availability_zones.azs.names
@@ -14,16 +14,16 @@ module "vpc" {
   single_nat_gateway   = true
 
   tags = {
-    "kubernetes.io/cluster/ramu-eks-cluster" = "shared"
+    "kubernetes.io/cluster/paramu-eks-cluster" = "shared"
   }
 
   public_subnet_tags = {
-    "kubernetes.io/cluster/ramu-eks-cluster" = "shared"
+    "kubernetes.io/cluster/paramu-eks-cluster" = "shared"
     "kubernetes.io/role/elb"               = 1
   }
 
   private_subnet_tags = {
-    "kubernetes.io/cluster/ramu-eks-cluster" = "shared"
+    "kubernetes.io/cluster/paramu-eks-cluster" = "shared"
     "kubernetes.io/role/internal-elb"      = 1
   }
 
@@ -32,7 +32,7 @@ module "vpc" {
 module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
-  cluster_name    = "ramu-eks-cluster"
+  cluster_name    = "paramu-eks-cluster"
   cluster_version = "1.24"
 
   cluster_endpoint_public_access = true
